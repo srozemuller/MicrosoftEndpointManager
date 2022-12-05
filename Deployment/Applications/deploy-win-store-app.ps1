@@ -39,11 +39,10 @@ $appInstaller = $app.Data.Versions[-1].Installers
 
 
 $imageUrl = "https://apps.microsoft.com/store/api/ProductsDetails/GetProductDetailsById/{0}?hl=en-US&gl=US" -f $exactApp.PackageIdentifier
-$test = Invoke-RestMethod -Uri $imageUrl -Method GET 
-$test
+$image = Invoke-RestMethod -Uri $imageUrl -Method GET 
 $wc = New-Object System.Net.WebClient
-$wc.DownloadFile($test.IconUrl, "./est.jpg")
-$base64string = [Convert]::ToBase64String([IO.File]::ReadAllBytes('./est.jpg'))
+$wc.DownloadFile($image.IconUrl, "./temp.jpg")
+$base64string = [Convert]::ToBase64String([IO.File]::ReadAllBytes('./temp.jpg'))
 
 
 $deployUrl = "https://graph.microsoft.com/beta/deviceAppManagement/mobileApps"
