@@ -1,0 +1,190 @@
+{
+    "name": "MS Teams",
+    "description": "",
+    "platforms": "windows10",
+    "technologies": "endpointPrivilegeManagement",
+    "roleScopeTagIds": [
+        "0"
+    ],
+    "settings": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSetting",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}",
+                "groupSettingCollectionValue": [
+                    {
+                        "children": [
+                            {
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                                "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_appliesto",
+                                "choiceSettingValue": {
+                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
+                                    "value": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_allusers",
+                                    "children": [],
+                                    "settingValueTemplateReference": {
+                                        "settingValueTemplateId": "2ec26569-c08f-434c-af3d-a50ac4a1ce26"
+                                    }
+                                },
+                                "settingInstanceTemplateReference": {
+                                    "settingInstanceTemplateId": "0cde1c42-c701-44b1-94b7-438dd4536128"
+                                }
+                            },
+                            {
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                                "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_description",
+                                "simpleSettingValue": {
+                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                                    "value": "Microsoft Teams",
+                                    "settingValueTemplateReference": {
+                                        "settingValueTemplateId": "5e82a1e9-ef4f-43ea-8031-93aace2ad14d"
+                                    }
+                                },
+                                "settingInstanceTemplateReference": {
+                                    "settingInstanceTemplateId": "b3714f3a-ead8-4682-a16f-ffa264c9d58f"
+                                }
+                            },
+                            {
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                                "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_filehash",
+                                "simpleSettingValue": {
+                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                                    "value": "31F5E43E9283CF2469D8B3E51E7C28C132C6ECB0DAB855DF52CBF21D5394AE0B",
+                                    "settingValueTemplateReference": {
+                                        "settingValueTemplateId": "1adcc6f7-9fa4-4ce3-8941-2ce22cf5e404"
+                                    }
+                                },
+                                "settingInstanceTemplateReference": {
+                                    "settingInstanceTemplateId": "e4436e2c-1584-4fba-8e38-78737cbbbfdf"
+                                }
+                            },
+                            {
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                                "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_ruletype",
+                                "choiceSettingValue": {
+                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
+                                    "value": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_self",
+                                    "children": [
+                                        {
+                                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionInstance",
+                                            "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_ruletype_validation",
+                                            "choiceSettingCollectionValue": [
+                                                {
+                                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
+                                                    "value": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_ruletype_validation_0",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "settingValueTemplateReference": {
+                                        "settingValueTemplateId": "cb2ea689-ebc3-42ea-a7a4-c704bb13e3ad"
+                                    }
+                                },
+                                "settingInstanceTemplateReference": {
+                                    "settingInstanceTemplateId": "bc5a31ac-95b5-4ec6-be1f-50a384bb165f"
+                                }
+                            },
+                            {
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                                "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_signaturesource",
+                                "choiceSettingValue": {
+                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
+                                    "value": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_signaturesource_0",
+                                    "children": [
+                                        {
+                                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                                            "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_certificatepayloadwithreusablesetting",
+                                            "simpleSettingValue": {
+                                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationReferenceSettingValue",
+                                                "value": "054973c0-c52c-4313-b044-be61f5dabf18"
+                                            }
+                                        },
+                                        {
+                                            "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                                            "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_certificatetype",
+                                            "choiceSettingValue": {
+                                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
+                                                "value": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_issuingauthority",
+                                                "children": [],
+                                                "settingValueTemplateReference": {
+                                                    "settingValueTemplateId": "e36c490a-62b5-4b8c-8b2a-f099fad4441b"
+                                                }
+                                            },
+                                            "settingInstanceTemplateReference": {
+                                                "settingInstanceTemplateId": "ea3b1b52-411c-4d89-80e9-c2289e59a97f"
+                                            }
+                                        }
+                                    ],
+                                    "settingValueTemplateReference": {
+                                        "settingValueTemplateId": "437fac65-8d18-433c-bd51-8edd33038082"
+                                    }
+                                },
+                                "settingInstanceTemplateReference": {
+                                    "settingInstanceTemplateId": "beb74dcd-b6c8-41b1-a95d-0874e96951e0"
+                                }
+                            },
+                            {
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                                "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_childprocessbehavior",
+                                "choiceSettingValue": {
+                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
+                                    "value": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_allowrunelevatedrulerequired",
+                                    "children": []
+                                }
+                            },
+                            {
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                                "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_name",
+                                "simpleSettingValue": {
+                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                                    "value": "Teams",
+                                    "settingValueTemplateReference": {
+                                        "settingValueTemplateId": "03f003e5-43ef-4e7e-bf30-57f00781fdcc"
+                                    }
+                                },
+                                "settingInstanceTemplateReference": {
+                                    "settingInstanceTemplateId": "fdabfcf9-afa4-4dbf-a4ef-d5c1549065e1"
+                                }
+                            },
+                            {
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                                "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_filename",
+                                "simpleSettingValue": {
+                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                                    "value": "msteams.exe",
+                                    "settingValueTemplateReference": {
+                                        "settingValueTemplateId": "a165327c-f0e5-4c7d-9af1-d856b02191f7"
+                                    }
+                                },
+                                "settingInstanceTemplateReference": {
+                                    "settingInstanceTemplateId": "0c1ceb2b-bbd4-46d4-9ba5-9ee7abe1f094"
+                                }
+                            },
+                            {
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                                "settingDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_filepath",
+                                "simpleSettingValue": {
+                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                                    "value": "c:\\pathtoMSTeams.exe",
+                                    "settingValueTemplateReference": {
+                                        "settingValueTemplateId": "f011bcfc-03cd-4b28-a1f4-305278d7a030"
+                                    }
+                                },
+                                "settingInstanceTemplateReference": {
+                                    "settingInstanceTemplateId": "c3b7fda4-db6a-421d-bf04-d485e9d0cfb1"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "settingInstanceTemplateReference": {
+                    "settingInstanceTemplateId": "ee3d2e5f-6b3d-4cb1-af9b-37b02d3dbae2"
+                }
+            }
+        }
+    ],
+    "templateReference": {
+        "templateId": "cff02aad-51b1-498d-83ad-81161a393f56_1"
+    }
+}
