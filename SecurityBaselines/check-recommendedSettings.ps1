@@ -12,9 +12,7 @@ $getCurrentBaselines = Invoke-RestMethod -Uri $currentConfiguredBaselinesUrl -He
 # Settings are needed to get nice names for the settings.
 $getCurrentBaselines.value.ForEach
 ({
-    # Code block here
     $baseline = $_
-
     # Get current baseline information
     $baselineSettingsUrl = "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('{0}')/settings?`$expand=settingDefinitions&top=1000" -f $baseline.Id
     $getBaselineSettings = Invoke-RestMethod -Uri $baselineSettingsUrl -Headers $header -Method Get
@@ -28,13 +26,17 @@ $getCurrentBaselines.value.ForEach
         $getSettingInsights.value.ForEach({
                 $getSettingInsightsId = $_.settingDefinitionId
                 $recommendedSettingId = $_.settingInsight.value
-
+                # Get Setting information from the definition based on the insights setting definition Id
                 $currentBaselineDefinition = $getBaselineSettings.value.settingDefinitions.Where({ $_.id -eq $getSettingInsightsId })
+                # Search for the current setting value in the policy
                 $currentBaselineSetting = ($getBaselineSettings.value.settingInstance.Where({ $_.settingDefinitionId -eq $getSettingInsightsId })).choiceSettingValue.value
 
+                # Make the value human readable by searching in the setting definition for the specific setting Id
                 $currentBaselineSettingReadable = $currentBaselineDefinition.options.Where({ $_.itemId -eq $currentBaselineSetting }).displayName
+                # At last, search in the same definition for the setting value that Microsoft suggests.
                 $shouldBeValue = $currentBaselineDefinition.options.Where({ $_.itemId -eq $recommendedSettingId }).displayName
 
+                # Send message to the user based on the findings.
                 if ($currentBaselineSettingReadable -ne $shouldBeValue) {
                     Write-Warning "Baseline: $($baseline.Name) has setting: $($currentBaselineDefinition.displayName) with value: $($currentBaselineSettingReadable) but should be: $shouldBeValue"
                 }
