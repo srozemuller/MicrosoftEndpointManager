@@ -8,6 +8,8 @@ function Sync-PrintersToIntune {
        If you have an access token, you can pass it to the function.
        .PARAMETER Mode
         Create mode will create new policies (leaves existing policies), Update mode will update existing policies (does not create), FullSync will DELETE all universal print polices and create new policies.
+       .PARAMETER Force
+        If FullSync mode is used, the Force switch will delete all existing policies without confirmation.
         .EXAMPLE
        Sync-PrintersToIntune -AccessToken $AccessToken -Mode Create
        .EXAMPLE
